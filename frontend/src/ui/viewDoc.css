@@ -1,0 +1,177 @@
+
+body {
+    background-color: #f3f4f6;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .tabs {
+    display: flex;
+    border-bottom: 1px solid #e5e7eb;
+    margin-bottom: 1.5rem;
+  }
+  
+  .tab {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tab-active {
+    color: #4f46e5;
+    font-weight: 600;
+  }
+  
+  .tab-active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #4f46e5;
+  }
+  
+  .request-section {
+    margin-bottom: 2rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .message {
+    text-align: center;
+    color: #6b7280;
+  }
+  
+  .error-message {
+    text-align: center;
+    color: #ef4444;
+  }
+  
+  .request-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .request-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .request-info h3 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .request-info p {
+    color: #4b5563;
+    font-size: 0.875rem;
+    margin: 0.25rem 0;
+  }
+  
+  .status-declined {
+    color: #dc2626;
+    font-weight: 500;
+  }
+  
+  .status-approved {
+    color: #16a34a;
+    font-weight: 500;
+  }
+  
+  .status-pending {
+    color: #ca8a04;
+    font-weight: 500;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  button {
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border: none;
+    color: white;
+  }
+  
+  .btn-approve {
+    background-color: #22c55e;
+  }
+  
+  .btn-approve:hover {
+    background-color: #16a34a;
+  }
+  
+  .btn-revoke {
+    background-color: #eab308;
+  }
+  
+  .btn-revoke:hover {
+    background-color: #ca8a04;
+  }
+  
+  .btn-decline {
+    background-color: #ef4444;
+  }
+  
+  .btn-decline:hover {
+    background-color: #dc2626;
+  }
+  
+  .notification {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: white;
+    animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
+  }
+  
+  .notification-success {
+    background-color: #22c55e;
+  }
+  
+  .notification-error {
+    background-color: #ef4444;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+  }
